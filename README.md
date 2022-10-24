@@ -1,2 +1,3 @@
-# jamstackhack-22
+## Jamstackhack 22
+
 A jamstack application
