@@ -1,3 +1,4 @@
 ## Jamstackhack 22
 
-A jamstack application
+A jamstack application using Xata
+
