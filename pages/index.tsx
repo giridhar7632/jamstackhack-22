@@ -1,30 +1,30 @@
-import type { InferGetServerSidePropsType } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { getXataClient } from "../utils/xata.codegen";
-import xatafly from "../public/xatafly.gif";
+import type { InferGetServerSidePropsType } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { getXataClient } from '../utils/xata.codegen'
+import xatafly from '../public/xatafly.gif'
 
 const pushDummyData = async () => {
-  const response = await fetch("/api/write-links-to-xata");
+  const response = await fetch('/api/write-links-to-xata')
 
   if (response.ok) {
-    window?.location.reload();
+    window?.location.reload()
   }
-};
+}
 
 const removeDummyItem = async (id: string) => {
-  const { status } = await fetch("/api/clean-xata", {
-    method: "POST",
+  const { status } = await fetch('/api/clean-xata', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ id }),
-  });
+  })
 
   if (status === 200) {
-    window?.location.reload();
+    window?.location.reload()
   }
-};
+}
 
 export default function IndexPage({
   links,
@@ -54,7 +54,7 @@ export default function IndexPage({
                 <button
                   type="button"
                   onClick={() => {
-                    removeDummyItem(id);
+                    removeDummyItem(id)
                   }}
                 >
                   <span role="img" aria-label="delete item">
@@ -74,7 +74,7 @@ export default function IndexPage({
             <button
               type="button"
               onClick={() => {
-                pushDummyData();
+                pushDummyData()
               }}
             >
               Push records to Xata
@@ -84,22 +84,22 @@ export default function IndexPage({
       </article>
       <footer>
         <span>
-          Made by{" "}
+          Made by{' '}
           <a href="https://xata.io" rel="noopener noreferrer" target="_blank">
             <object data="/xatafly.svg" />
           </a>
         </span>
       </footer>
     </main>
-  );
+  )
 }
 
 export const getServerSideProps = async () => {
-  const xata = await getXataClient();
-  const links = await xata.db.nextjs_with_xata_example.getAll();
+  const xata = await getXataClient()
+  const links = await xata.db.nextjs_with_xata_example.getAll()
   return {
     props: {
       links,
     },
-  };
-};
+  }
+}
