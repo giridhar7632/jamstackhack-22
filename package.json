@@ -27,5 +27,17 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "next/core-web-vitals"
+    ]
   }
 }
