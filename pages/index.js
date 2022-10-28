@@ -1,6 +1,10 @@
-export default function IndexPage() {
+import Layout from '../layout'
+import Sidebar from '../layout/Sidebar'
+
+function Index() {
   return (
-    <main>
+    <main className="flex">
+      <Sidebar />
       <header className="flex flex-column items-center justify-center">
         <h1 className="font-3xl">
           Next.js with<span className="text-pink-600">xata + cloudinary</span>
@@ -10,10 +14,18 @@ export default function IndexPage() {
       <footer className="flex flex-column items-center justify-center">
         <span>
           Made for{' '}
-          <a href="https://xata.io" rel="noopener noreferrer" target="_blank"> Jamstack Hack
+          <a href="https://xata.io" rel="noopener noreferrer" target="_blank">
+            {' '}
+            Jamstack Hack
           </a>
         </span>
       </footer>
     </main>
   )
 }
+
+export default Index
+
+// Index.getLayout = function getLayout(page) {
+//   return <Layout>{page}</Layout>
+// }

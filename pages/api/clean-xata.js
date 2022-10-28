@@ -1,16 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
 import { getXataClient } from '../../utils/xata.codegen'
 
 const xata = getXataClient()
 
-const deleteItem = async (id: string) => {
+const deleteItem = async (id) => {
   return await xata.db.nextjs_with_xata_example.delete(id)
 }
 
-export async function cleanDummyDataFromXata(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export async function cleanDummyDataFromXata(req, res) {
   const { id } = req.body
   await deleteItem(id)
 
