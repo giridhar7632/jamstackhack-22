@@ -1,5 +1,5 @@
-import Layout from '../layout'
-import Sidebar from '../layout/Sidebar'
+import Layout from '../components/layout'
+import Sidebar from '../components/layout/Sidebar'
 
 function Index() {
   return (
