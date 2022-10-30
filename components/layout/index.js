@@ -5,7 +5,7 @@ import Sidebar from './Sidebar'
 const Layout = ({ meta, children, ...props }) => {
   return (
     <div
-      className="flex justify-between"
+      className="lg:flex relative"
       style={{ minHeight: '100vh', maxWidth: '100vw' }}
     >
       <Meta {...meta} />
