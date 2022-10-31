@@ -1,14 +1,33 @@
 import clsx from 'clsx'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { NavLink } from '../common/Links'
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const handleToggle = () => setIsOpen((prev) => !prev)
 
-  return (<div className={clsx("absolute w-0 lg:block lg:min-w-[15vw] p-3 ease-in-out", isOpen && "w-screen")}>
-    <nav className={}></nav>
-  </div>)
+  return (
+    <>
+      <div
+        onClick={handleToggle}
+        className={clsx('px-3 py-2 border block lg:hidden cursor-pointer')}
+      >
+        {isOpen ? 'Close' : 'Menu'}
+      </div>
+      <div
+        className={clsx(
+          'absolute w-screen h-[100vh] lg:relative lg:block lg:max-w-[15vw] p-3 border-r-1 lg:border-gray-200 bg-white ease-in-out duration-300 transition-all shadow lg:translate-x-0',
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        )}
+      >
+        <nav className={clsx('flex flex-col px-3 py-6')}>
+          <NavLink href={'/'}>Home</NavLink>
+          <NavLink href={'/products'}>Products</NavLink>
+        </nav>
+      </div>
+    </>
+  )
 }
 
 export default Sidebar
