@@ -27,7 +27,7 @@ export default React.forwardRef(function Button(
     <button
       {...attributes}
       className={clsx(
-        'inline-block rounded-md px-6 py-2 text-sm font-semibold leading-snug transition duration-150 ease-in-out cursor-pointer ring-sky-300 hover:ring focus:ring active:ring',
+        'inline-block rounded-md px-6 py-2 text-sm font-semibold leading-snug transition duration-150 ease-in-out cursor-pointer ring-sky-300 hover:ring focus:ring',
         variantClassname,
         attributes.className
       )}
