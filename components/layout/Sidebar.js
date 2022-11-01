@@ -21,7 +21,10 @@ const Sidebar = () => {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
-        <nav className={clsx('flex flex-col px-3 py-6')}>
+        <nav
+          onClick={handleToggle}
+          className={clsx('flex flex-col h-full px-3 py-6')}
+        >
           <NavLink href={'/'}>Home</NavLink>
           <NavLink href={'/products'}>Products</NavLink>
         </nav>

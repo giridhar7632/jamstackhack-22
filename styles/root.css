@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  *::-webkit-scrollbar {
+    @apply w-1 h-4;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full border border-gray-400;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
+  }
+}

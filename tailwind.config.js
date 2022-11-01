@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        laptop: '1024px',
+        desktop: '1281px',
+      },
       fontFamily: {
         sans: [
           'Inter',
@@ -20,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
