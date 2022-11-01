@@ -1,8 +1,8 @@
 import { Disclosure } from '@headlessui/react'
 import clsx from 'clsx'
-import ChevronRight from './icons/ChevronRight'
+import ChevronRight from '../common/icons/ChevronRight'
 
-export default function MyDisclosure({ title, children, ...props }) {
+export default function FormSection({ title, children, ...props }) {
   return (
     <Disclosure as="div" {...props}>
       {({ open }) => (

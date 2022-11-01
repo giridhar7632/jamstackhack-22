@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import Button from '../common/Button'
 import Input from '../common/Input'
-import MyDisclosure from '../common/MyDisclosure'
+import FormSection from './Section'
 import MediaUpload from './MediaUpload'
 import ThumbnailUpload from './ThumbnailUpload'
 
@@ -33,7 +33,7 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
 
   return (
     <form onSubmit={onSubmit} {...props} className="flex flex-col space-y-6">
-      <MyDisclosure defaultOpen={true} title={'Product Information'}>
+      <FormSection defaultOpen={true} title={'Product Information'}>
         <Input
           name="name"
           label="Name of the Product"
@@ -88,13 +88,13 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
             })}
           />
         </div>
-      </MyDisclosure>
-      <MyDisclosure title={'Thumbnail Upload'}>
+      </FormSection>
+      <FormSection title={'Thumbnail Upload'}>
         <ThumbnailUpload setValue={setValue} />
-      </MyDisclosure>
-      <MyDisclosure title={'Media Upload'}>
+      </FormSection>
+      <FormSection title={'Media Upload'}>
         <MediaUpload setValue={setValue} />
-      </MyDisclosure>
+      </FormSection>
 
       <Button type="submit" className="w-full">
         {type ? `${type} Product` : 'Submit'}
