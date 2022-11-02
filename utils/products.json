@@ -80,61 +80,7 @@
       "price": 36,
       "stock": 1000,
       "thumbnail": "",
-      "media": [""]
-    },
-    {
-      "id": 11,
-      "name": "Product 1",
-      "description": "wkudhgjk hv c weuye wbn sy qhgqcnq 126ouwfv12b e2oevqwjhdqw dwquvdqw dqvdyqwv dwq d8qw dhqwvdqwv dbjqwd7uq wjdwdv wegvmcdqhgdgqo;wdhiqy80pq;wqj quuhbwqd q.",
-      "price": 36,
-      "stock": 1000,
-      "thumbnail": "",
-      "media": [""]
-    },
-    {
-      "id": 12,
-      "name": "Product 2",
-      "description": "wkudhgjk hv c weuye wbn sy qhgqcnq 126ouwfv12b e2oevqwjhdqw dwquvdqw dqvdyqwv dwq d8qw dhqwvdqwv dbjqwd7uq wjdwdv wegvmcdqhgdgqo;wdhiqy80pq;wqj quuhbwqd q.",
-      "price": 36,
-      "stock": 1000,
-      "thumbnail": "",
-      "media": [""]
-    },
-    {
-      "id": 13,
-      "name": "Product 3",
-      "description": "wkudhgjk hv c weuye wbn sy qhgqcnq 126ouwfv12b e2oevqwjhdqw dwquvdqw dqvdyqwv dwq d8qw dhqwvdqwv dbjqwd7uq wjdwdv wegvmcdqhgdgqo;wdhiqy80pq;wqj quuhbwqd q.",
-      "price": 36,
-      "stock": 1000,
-      "thumbnail": "",
-      "media": [""]
-    },
-    {
-      "id": 14,
-      "name": "Product 4",
-      "description": "wkudhgjk hv c weuye wbn sy qhgqcnq 126ouwfv12b e2oevqwjhdqw dwquvdqw dqvdyqwv dwq d8qw dhqwvdqwv dbjqwd7uq wjdwdv wegvmcdqhgdgqo;wdhiqy80pq;wqj quuhbwqd q.",
-      "price": 36,
-      "stock": 1000,
-      "thumbnail": "",
-      "media": [""]
-    },
-    {
-      "id": 15,
-      "name": "Product 5",
-      "description": "wkudhgjk hv c weuye wbn sy qhgqcnq 126ouwfv12b e2oevqwjhdqw dwquvdqw dqvdyqwv dwq d8qw dhqwvdqwv dbjqwd7uq wjdwdv wegvmcdqhgdgqo;wdhiqy80pq;wqj quuhbwqd q.",
-      "price": 36,
-      "stock": 1000,
-      "thumbnail": "",
-      "media": [""]
-    },
-    {
-      "id": 16,
-      "name": "Product 6",
-      "description": "wkudhgjk hv c weuye wbn sy qhgqcnq 126ouwfv12b e2oevqwjhdqw dwquvdqw dqvdyqwv dwq d8qw dhqwvdqwv dbjqwd7uq wjdwdv wegvmcdqhgdgqo;wdhiqy80pq;wqj quuhbwqd q.",
-      "price": 36,
-      "stock": 1000,
-      "thumbnail": "",
-      "media": [""]
+      "media": []
     }
   ]
 }

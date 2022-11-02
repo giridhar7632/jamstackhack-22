@@ -31,17 +31,23 @@ const ProductLayout = ({ product }) => {
       <div>
         <div className="mb-2 h-6"></div>
         <Section title={'Thumbnail'}>
-          <Link href={product.thumbnail}>
-            <a target="_blank">
-              <Image
-                height={281}
-                width={500}
-                className="aspect-video max-h-[281px] max-w-[500px] rounded"
-                src={product.thumbnail}
-                alt={''}
-              />
-            </a>
-          </Link>
+          {product.thumbnail ? (
+            <Link href={product.thumbnail}>
+              <a target="_blank">
+                <Image
+                  height={281}
+                  width={500}
+                  className="aspect-video max-h-[281px] max-w-[500px] rounded"
+                  src={product.thumbnail}
+                  alt={''}
+                />
+              </a>
+            </Link>
+          ) : (
+            <p className="h-[100px] w-[400px] text-center font-bold text-gray-300">
+              No thumbnail
+            </p>
+          )}
         </Section>
         <Section title={'Media'}>
           {product.media.length ? (
@@ -61,7 +67,9 @@ const ProductLayout = ({ product }) => {
               ))}
             </div>
           ) : (
-            <p className="text-center font-bold text-gray-400"> No media</p>
+            <p className="h-[100px] w-[400px] text-center font-bold text-gray-300">
+              No media
+            </p>
           )}
         </Section>
       </div>

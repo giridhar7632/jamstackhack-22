@@ -5,7 +5,7 @@ import DeleteProduct from '../../components/Product/DeleteProduct'
 import UpdateProduct from '../../components/Product/UpdateProduct'
 import data from '../../utils/products.json'
 
-const Product = ({ id, product }) => {
+const Product = ({ product }) => {
   return (
     <div>
       <header className="my-3 flex flex-col items-center justify-between rounded-md md:flex-row">
@@ -13,14 +13,20 @@ const Product = ({ id, product }) => {
           <span className="mr-2 text-sm font-medium text-gray-500">
             Product:{' '}
           </span>
-          {id}
+          {product?.name}
         </h1>
         <div className="flex items-center space-x-2">
           <UpdateProduct product={product} />
           <DeleteProduct />
         </div>
       </header>
-      {product && <ProductLayout product={product} />}
+      {product ? (
+        <ProductLayout product={product} />
+      ) : (
+        <div className="w-full text-center text-2xl font-bold text-gray-300">
+          No details
+        </div>
+      )}
     </div>
   )
 }
@@ -35,7 +41,6 @@ export async function getStaticProps({ params }) {
   const product = data.PRODUCTS.filter((i) => i.id == params.id)[0]
   return {
     props: {
-      id: params.id,
       product,
     },
   }

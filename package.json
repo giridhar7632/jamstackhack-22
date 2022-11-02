@@ -4,14 +4,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:xata": "xata init --schema=schema.template.json --codegen=utils/xata.codegen.js",
-    "poststart:xata": "xata codegen",
-    "xata": "xata codegen",
     "format": "npx prettier **/**/*.{js,jsx} --write",
     "lint": "next lint"
   },
   "devDependencies": {
-    "@xata.io/cli": "0.8.1",
     "autoprefixer": "^10.4.12",
     "eslint": "8.21.0",
     "eslint-config-next": "latest",
@@ -22,8 +18,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
-    "@tailwindcss/forms": "^0.5.3",
-    "@xata.io/client": "^0.19.1",
+    "@xata.io/client": "^0.20.0",
     "clsx": "^1.2.1",
     "next": "latest",
     "react": "^18.2.0",

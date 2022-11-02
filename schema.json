@@ -1,0 +1,15 @@
+{
+  "tables": [
+    {
+      "name": "products",
+      "columns": [
+        { "name": "name", "type": "string" },
+        { "name": "description", "type": "text" },
+        { "name": "price", "type": "float" },
+        { "name": "stock", "type": "int" },
+        { "name": "thumbnail", "type": "string" },
+        { "name": "media", "type": "multiple" }
+      ]
+    }
+  ]
+}
