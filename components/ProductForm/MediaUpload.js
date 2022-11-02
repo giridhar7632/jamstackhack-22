@@ -17,7 +17,7 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
 
   return (
     <div>
-      <label htmlFor="media" className="text-sm text-gray-600 block mb-1">
+      <label htmlFor="media" className="mb-1 block text-sm text-gray-600">
         Upload multiple files
       </label>
       <input
@@ -25,14 +25,14 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
         multiple
         name="media"
         onChange={handleOnChange}
-        className="p-3 mb-3 w-full border rounded-md focus:ring-sky-300 focus:border-sky-300"
+        className="mb-3 w-full rounded-md border p-3 focus:border-sky-300 focus:ring-sky-300"
       />
       <div>
-        <div className="max-w-full grid grid-cols-2 gap-2 mb-2 overflow-hidden">
+        <div className="mb-2 grid max-w-full grid-cols-2 gap-2 overflow-hidden">
           {imageSrc.map((i, idx) => (
             <div key={idx}>
               <img
-                className="rounded aspect-video max-h-40 flex-1 overflow-hidden"
+                className="aspect-video max-h-40 flex-1 overflow-hidden rounded"
                 src={i}
                 alt=""
               />

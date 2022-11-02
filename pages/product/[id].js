@@ -8,9 +8,9 @@ import data from '../../utils/products.json'
 const Product = ({ id, product }) => {
   return (
     <div>
-      <header className="rounded-md flex flex-col md:flex-row items-center justify-between my-3">
-        <h1 className="text-xl font-bold text-gray-700 truncate">
-          <span className="text-sm font-medium mr-2 text-gray-500">
+      <header className="my-3 flex flex-col items-center justify-between rounded-md md:flex-row">
+        <h1 className="mb-3 truncate text-xl font-bold text-gray-700">
+          <span className="mr-2 text-sm font-medium text-gray-500">
             Product:{' '}
           </span>
           {id}

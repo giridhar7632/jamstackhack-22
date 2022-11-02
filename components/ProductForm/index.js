@@ -56,7 +56,7 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
           error={errors.description ? errors.description.message : false}
           register={register('description')}
         />
-        <div className="flex items-center flex-col md:flex-row md:space-x-2">
+        <div className="flex flex-col items-center md:flex-row md:space-x-2">
           <Input
             className=""
             name="price"

@@ -10,7 +10,7 @@ function Products() {
 
   return (
     <div>
-      <header className="flex items-center justify-between mt-3">
+      <header className="mt-3 flex items-center justify-between">
         <h1 className="text-2xl font-bold text-gray-700">Products</h1>
         <div className="flex items-center space-x-2">
           <AddProduct />

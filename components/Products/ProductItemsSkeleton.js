@@ -2,11 +2,11 @@ import React from 'react'
 
 const ItemSkeleton = () => {
   return (
-    <div className="flex animate-pulse border space-x-16 my-2 px-6 py-4 rounded-md shadow-sm cursor-loading">
-      <div className="flex-1 rounded bg-gray-200 h-3"></div>
-      <div className="flex-1 rounded bg-gray-200 h-3"></div>
-      <div className="flex-1 rounded bg-gray-200 h-3"></div>
-      <div className="flex-1 rounded bg-gray-200 h-3"></div>
+    <div className="cursor-loading my-2 flex animate-pulse space-x-16 rounded-md border px-6 py-4 shadow-sm">
+      <div className="h-3 flex-1 rounded bg-gray-200"></div>
+      <div className="h-3 flex-1 rounded bg-gray-200"></div>
+      <div className="h-3 flex-1 rounded bg-gray-200"></div>
+      <div className="h-3 flex-1 rounded bg-gray-200"></div>
     </div>
   )
 }

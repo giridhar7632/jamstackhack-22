@@ -29,7 +29,7 @@ const AddProduct = ({ props }) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 z-100 bg-black bg-opacity-25" />
+            <div className="z-100 fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -46,7 +46,7 @@ const AddProduct = ({ props }) => {
                 <Dialog.Panel className="w-full max-w-xl transform overflow-y-auto rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="div"
-                    className="text-lg flex items-center justify-between font-semibold leading-6 text-gray-800 mb-5"
+                    className="mb-5 flex items-center justify-between text-lg font-semibold leading-6 text-gray-800"
                   >
                     <h3>Update Product</h3>
                     <Close onClick={handleClose} />

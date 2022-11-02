@@ -3,15 +3,15 @@ import Link from 'next/link'
 import React from 'react'
 
 const Section = ({ title, children, ...props }) => (
-  <section className="rounded-md px-3 py-4 mb-3 border" {...props}>
-    <h3 className="text-xl font-semibold text-gray-500 mb-3">{title}</h3>
+  <section className="mb-3 rounded-md border px-3 py-4" {...props}>
+    <h3 className="mb-3 text-xl font-semibold text-gray-500">{title}</h3>
     {children}
   </section>
 )
 
 const ProductLayout = ({ product }) => {
   return (
-    <div className="flex gap-4 flex-col md:flex-row mt-6 overflow-auto">
+    <div className="mt-6 flex flex-col gap-4 overflow-auto md:flex-row">
       <div>
         <p className="mb-2 pl-3">Product Id: {product.id}</p>
         <Section title={'Name'}>
@@ -36,7 +36,7 @@ const ProductLayout = ({ product }) => {
               <Image
                 height={281}
                 width={500}
-                className="max-w-[500px] max-h-[281px] aspect-video rounded"
+                className="aspect-video max-h-[281px] max-w-[500px] rounded"
                 src={product.thumbnail}
                 alt={''}
               />
@@ -45,14 +45,14 @@ const ProductLayout = ({ product }) => {
         </Section>
         <Section title={'Media'}>
           {product.media.length ? (
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
               {product.media?.map((i, idx) => (
                 <Link href={i} key={idx}>
                   <a target="_blank">
                     <Image
                       height={138}
                       width={245}
-                      className="max-h-[138px] max-w-[245px] p-1 aspect-video rounded overflow-hidden"
+                      className="aspect-video w-full overflow-hidden rounded p-1 lg:max-h-[138px] lg:max-w-[245px]"
                       src={i}
                       alt={''}
                     />

@@ -7,11 +7,11 @@ import Sidebar from './Sidebar'
 const Layout = ({ meta, children, ...props }) => {
   const router = useRouter()
   return (
-    <div className="lg:flex min-h-screen max-w-screen">
+    <div className="max-w-screen min-h-screen lg:flex">
       <Meta {...meta} />
       <Sidebar />
-      <div className="flex flex-col w-[100%] max-w-screen-xl mx-auto">
-        <main className="px-2 md:px-6 py-2 flex-1" {...props}>
+      <div className="mx-auto flex w-[100%] max-w-screen-xl flex-col">
+        <main className="flex-1 px-2 py-2 md:px-6" {...props}>
           {children}
         </main>
         {router.pathname === '/' && <Footer />}

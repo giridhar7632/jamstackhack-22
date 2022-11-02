@@ -16,6 +16,8 @@
     "eslint": "8.21.0",
     "eslint-config-next": "latest",
     "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.2.1"
   },
   "dependencies": {
@@ -38,6 +40,9 @@
     "extends": [
       "next",
       "next/core-web-vitals"
-    ]
+    ],
+    "rules": {
+      "@next/next/no-img-element": "off"
+    }
   }
 }

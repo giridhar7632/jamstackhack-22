@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 export const Link = ({ children, ...props }) => {
   return (
     <NextLink {...props}>
-      <a className="text-sky-600 hover:underline px-2">{children}</a>
+      <a className="px-2 text-sky-600 hover:underline">{children}</a>
     </NextLink>
   )
 }
@@ -11,7 +11,7 @@ export const Link = ({ children, ...props }) => {
 export const NavLink = ({ children, ...props }) => {
   return (
     <NextLink {...props}>
-      <a className="p-2 rounded border text-center my-2 border-gray-200 hover:shadow-sm text-gray-800 font-semibold hover:text-sky-600 ease">
+      <a className="ease my-2 rounded border border-gray-200 p-2 text-center font-semibold text-gray-800 hover:text-sky-600 hover:shadow-sm">
         {children}
       </a>
     </NextLink>

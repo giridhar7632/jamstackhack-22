@@ -3,10 +3,10 @@ import Layout from '../components/layout'
 
 function Index() {
   return (
-    <header className="flex flex-col h-full items-center justify-center">
-      <h1 className="text-3xl font-bold mb-3">Ecommerce CMS</h1>
-      <p className="text-sm text-gray-500 mb-2">built with</p>
-      <div className="max-w-[300px] flex items-center mb-2">
+    <header className="flex h-full flex-col items-center justify-center sm:max-lg:min-h-[85vh]">
+      <h1 className="mb-3 text-3xl font-bold">Ecommerce CMS</h1>
+      <p className="mb-2 text-sm text-gray-500">built with</p>
+      <div className="mb-2 flex max-w-[300px] items-center">
         <Link href={'https://nextjs.org/'} target={'_blank'}>
           Next.js
         </Link>

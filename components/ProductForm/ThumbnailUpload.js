@@ -20,10 +20,10 @@ const ThumbnailUpload = ({ defaultValue, setValue }) => {
       <input
         type="file"
         onChange={handleOnChange}
-        className="p-3 mb-3 w-full border rounded-md focus:ring-sky-300 focus:border-sky-300"
+        className="mb-3 w-full rounded-md border p-3 focus:border-sky-300 focus:ring-sky-300"
       />
       <div>
-        <img className="rounded aspect-video mb-2" src={imageSrc} alt="" />
+        <img className="mb-2 aspect-video rounded" src={imageSrc} alt="" />
         {imageSrc && !uploadData && (
           <Button
             variant="text"

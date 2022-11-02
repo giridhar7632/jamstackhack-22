@@ -10,7 +10,7 @@ export default function FormSection({ title, children, ...props }) {
           <Disclosure.Button
             as="div"
             className={clsx(
-              'flex items-center justify-between p-3 border rounded-md font-medium',
+              'flex items-center justify-between rounded-md border p-3 font-medium',
               !open && 'shadow-sm hover:shadow-md'
             )}
           >
@@ -22,7 +22,7 @@ export default function FormSection({ title, children, ...props }) {
               )}
             />
           </Disclosure.Button>
-          <Disclosure.Panel as="div" className="p-3 shadow-sm rounded">
+          <Disclosure.Panel as="div" className="rounded p-3 shadow-sm">
             {children}
           </Disclosure.Panel>
         </>
