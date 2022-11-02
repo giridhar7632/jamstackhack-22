@@ -20,7 +20,7 @@ const ThumbnailUpload = ({ defaultValue, setValue }) => {
       <input
         type="file"
         onChange={handleOnChange}
-        className="p-3 border rounded-md focus:ring-sky-300 focus:border-sky-300"
+        className="p-3 mb-3 w-full border rounded-md focus:ring-sky-300 focus:border-sky-300"
       />
       <div>
         <img className="rounded aspect-video mb-2" src={imageSrc} alt="" />

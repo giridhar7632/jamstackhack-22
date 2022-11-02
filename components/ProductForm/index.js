@@ -90,10 +90,13 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
         </div>
       </FormSection>
       <FormSection title={'Thumbnail Upload'}>
-        <ThumbnailUpload setValue={setValue} />
+        <ThumbnailUpload
+          defaultValue={defaultValues?.thumbnail}
+          setValue={setValue}
+        />
       </FormSection>
       <FormSection title={'Media Upload'}>
-        <MediaUpload setValue={setValue} />
+        <MediaUpload defaultValues={defaultValues?.media} setValue={setValue} />
       </FormSection>
 
       <Button type="submit" className="w-full">

@@ -25,17 +25,18 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
         multiple
         name="media"
         onChange={handleOnChange}
-        className="p-3 border rounded-md focus:ring-sky-300 focus:border-sky-300"
+        className="p-3 mb-3 w-full border rounded-md focus:ring-sky-300 focus:border-sky-300"
       />
       <div>
         <div className="max-w-full grid grid-cols-2 gap-2 mb-2 overflow-hidden">
           {imageSrc.map((i, idx) => (
-            <img
-              key={idx}
-              className="rounded aspect-video max-h-40 flex-1 overflow-hidden"
-              src={i}
-              alt=""
-            />
+            <div key={idx}>
+              <img
+                className="rounded aspect-video max-h-40 flex-1 overflow-hidden"
+                src={i}
+                alt=""
+              />
+            </div>
           ))}
         </div>
         {imageSrc.length && !uploadData ? (

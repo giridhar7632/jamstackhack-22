@@ -17,7 +17,7 @@ const Sidebar = () => {
       </div>
       <div
         className={clsx(
-          'absolute w-screen h-[100vh] lg:relative lg:block lg:max-w-[15vw] p-3 border-r-1 lg:border-gray-200 bg-white ease-in-out duration-300 transition-all shadow lg:translate-x-0',
+          'absolute w-screen h-max-content lg:relative lg:block lg:max-w-[15vw] p-3 border-r-1 lg:border-gray-200 bg-white ease-in-out duration-300 transition-all shadow lg:translate-x-0',
           isOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
