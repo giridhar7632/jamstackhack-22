@@ -1,9 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
-import { baseUrl } from '../../utils/config'
 
 const makeTitle = (title, name) =>
   title === name || !name ? title : `${title} | ${name}`
+
+const baseUrl =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'https://jamstackhack-22.netlify.app'
 
 const Meta = ({
   title = 'Jamstack Hack',

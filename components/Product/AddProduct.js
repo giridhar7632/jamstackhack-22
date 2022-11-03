@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
-import { baseUrl } from '../../utils/config'
+
 import Button from '../common/Button'
 import { Close } from '../common/icons/Close'
 import ProductForm from '../ProductForm'
@@ -11,7 +11,7 @@ const AddProduct = ({ props }) => {
   const handleOpen = () => setIsOpen(true)
   const onFormSubmit = async (data) => {
     try {
-      await fetch(`${baseUrl}/api/products/createProduct`, {
+      await fetch(`/api/products/createProduct`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import ProductItemsSkeleton from '../components/Products/ProductItemsSkeleton'
 import ProductHeader from '../components/Products/ProductHeader'
 import AddProduct from '../components/Product/AddProduct'
-import { baseUrl } from '../utils/config'
 
 function Products() {
   const [loading, setLoading] = useState(false)
@@ -13,7 +12,7 @@ function Products() {
     const fetchData = async () => {
       setLoading(true)
       try {
-        const res = await fetch(`${baseUrl}/api/products/getProducts`)
+        const res = await fetch(`/api/products/getProducts`)
         const { data } = await res.json()
         setProducts(data)
       } catch (error) {
