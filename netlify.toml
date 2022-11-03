@@ -2,7 +2,7 @@
 [build]
   command = "next build"
   functions = "netlify/functions"
-  publish = "out"
+  publish = ".next"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
