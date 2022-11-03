@@ -9,9 +9,21 @@ const UpdateProduct = ({ product, ...props }) => {
   const handleClose = () => setIsOpen(false)
   const handleOpen = () => setIsOpen(true)
 
-  const onFormSubmit = (data) => {
-    console.log(data)
-    handleClose()
+  const onFormSubmit = async (data) => {
+    try {
+      await fetch('/api/products/updateProduct', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: product.id, ...data }),
+      }).then(() => {
+        handleClose()
+        window.location.reload()
+      })
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
