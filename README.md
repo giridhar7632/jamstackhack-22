@@ -8,7 +8,7 @@
 - 🔦 [Starter Code](https://github.com/giridhar7632/ecommerce-cms-starter)
 <!-- - 📝 [Link to Article]() -->
 
-## Devlopment Environment Setup 🚀
+## Development Environment Setup 🚀
 
 Download it, git clone into coding environment of your choice 😃.
 
