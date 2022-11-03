@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import { baseUrl } from '../../utils/config'
 
 const makeTitle = (title, name) =>
   title === name || !name ? title : `${title} | ${name}`
@@ -8,7 +9,7 @@ const Meta = ({
   title = 'Jamstack Hack',
   name = '',
   description = 'An ecommerce content management system.',
-  url = process.env.NEXT_PUBLIC_URL,
+  url = baseUrl,
   image = '/og.jpg',
   children,
 }) => (
@@ -31,7 +32,7 @@ const Meta = ({
       content={description}
       key="twitter:description"
     />
-    <meta property="twitter:image" content={image} key="twitter:image" />
+    <meta property="twitter:image" content={url + image} key="twitter:image" />
     <meta
       name="theme-color"
       content="#f1f5f8"
