@@ -16,8 +16,10 @@ const AddProduct = ({ props }) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
-      }).then(() => window.location.reload)
-      handleClose()
+      }).then(() => {
+        handleClose()
+        window.location.reload()
+      })
     } catch (error) {
       console.log(error)
     }

@@ -21,7 +21,7 @@ const ProductLayout = ({ product }) => {
           <p className="text-md max-w-md">{product.description}</p>
         </Section>
         <Section title={'Price'}>
-          <p className="text-md max-w-md">{product.price}</p>
+          <p className="text-md max-w-md">{product.price} $</p>
           <p className="text-xs">for one product</p>
         </Section>
         <Section title={'In Stock'}>
@@ -39,7 +39,7 @@ const ProductLayout = ({ product }) => {
                   width={500}
                   className="aspect-video max-h-[281px] max-w-[500px] rounded"
                   src={product.thumbnail}
-                  alt={''}
+                  alt={product.name}
                 />
               </a>
             </Link>
@@ -50,7 +50,7 @@ const ProductLayout = ({ product }) => {
           )}
         </Section>
         <Section title={'Media'}>
-          {product.media.length ? (
+          {product.media?.length ? (
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {product.media?.map((i, idx) => (
                 <Link href={i} key={idx}>
