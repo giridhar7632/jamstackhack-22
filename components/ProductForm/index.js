@@ -32,63 +32,66 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
   })
 
   return (
-    <form onSubmit={onSubmit} {...props} className="flex flex-col space-y-6">
-      <FormSection defaultOpen={true} title={'Product Information'}>
-        <Input
-          name="name"
-          label="Name of the Product"
-          placeholder="My beautiful product..."
-          type="text"
-          error={errors.name ? errors.name.message : false}
-          register={register('name', {
-            required: {
-              value: true,
-              message: 'You must add the name of your product.',
-            },
-          })}
-        />
-        <Input
-          name="description"
-          label="Description (optional)"
-          placeholder="Warm and cozy. Beautiful and elegant..."
-          type="text"
-          multiline
-          error={errors.description ? errors.description.message : false}
-          register={register('description')}
-        />
-        <div className="flex flex-col items-center md:flex-row md:space-x-2">
+    <div {...props} className="flex flex-col space-y-6">
+      <form>
+        <FormSection defaultOpen={true} title={'Product Information'}>
           <Input
-            className=""
-            name="price"
-            label="Price"
-            placeholder="36.5"
-            type="number"
-            multiline
-            error={errors.price ? errors.price.message : false}
-            register={register('price', {
+            name="name"
+            label="Name of the Product"
+            placeholder="My beautiful product..."
+            type="text"
+            error={errors.name ? errors.name.message : false}
+            register={register('name', {
               required: {
                 value: true,
-                message: 'You must add the price of your product.',
+                message: 'You must add the name of your product.',
               },
             })}
           />
           <Input
-            className=""
-            name="stock"
-            label="Stock"
-            placeholder="1000"
-            type="number"
-            multiline
-            error={errors.stock ? errors.stock.message : false}
-            register={register('stock', {
-              required: {
-                value: true,
-                message: 'You must add the price of your product.',
-              },
-            })}
+            name="description"
+            label="Description (optional)"
+            placeholder="Warm and cozy. Beautiful and elegant..."
+            type="textarea"
+            error={errors.description ? errors.description.message : false}
+            register={register('description')}
           />
-        </div>
-      </FormSection>
+          <div className="flex flex-col items-center md:flex-row md:space-x-2">
+            <Input
+              className=""
+              name="price"
+              label="Price"
+              placeholder="36.5"
+              type="number"
+              multiline
+              error={errors.price ? errors.price.message : false}
+              register={register('price', {
+                required: {
+                  value: true,
+                  message: 'You must add the price of your product.',
+                },
+                setValueAs: (v) => parseFloat(v),
+              })}
+            />
+            <Input
+              className=""
+              name="stock"
+              label="Stock"
+              placeholder="1000"
+              type="number"
+              multiline
+              error={errors.stock ? errors.stock.message : false}
+              register={register('stock', {
+                required: {
+                  value: true,
+                  message: 'You must add the price of your product.',
+                },
+                setValueAs: (v) => parseInt(v),
+              })}
+            />
+          </div>
+        </FormSection>
+      </form>
       <FormSection title={'Thumbnail Upload'}>
         <ThumbnailUpload
           defaultValue={defaultValues?.thumbnail}
@@ -99,10 +102,10 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
         <MediaUpload defaultValues={defaultValues?.media} setValue={setValue} />
       </FormSection>
 
-      <Button type="submit" className="w-full">
+      <Button type="button" onClick={onSubmit} className="w-full">
         {type ? `${type} Product` : 'Submit'}
       </Button>
-    </form>
+    </div>
   )
 }
 

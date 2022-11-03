@@ -4,7 +4,7 @@ import Button from '../common/Button'
 const MediaUpload = ({ defaultValues = [], setValue }) => {
   const [imageSrc, setImageSrc] = useState([...defaultValues])
   const [loading, setLoading] = useState(false)
-  const [uploadData, setUploadData] = useState()
+  const [uploadedData, setUploadedData] = useState(false)
   const handleOnChange = (changeEvent) => {
     const selectedFIles = []
     const targetFiles = changeEvent.target.files
@@ -15,15 +15,56 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
     setImageSrc(selectedFIles)
   }
 
+  const handleUpload = async (uploadEvent) => {
+    uploadEvent.preventDefault()
+    setLoading(true)
+
+    const form = uploadEvent.currentTarget
+    const fileInput = Array.from(form.elements).find(
+      ({ name }) => name === 'file'
+    )
+    try {
+      // adding upload preset
+      const files = []
+      for (const file of fileInput.files) {
+        files.push(file)
+      }
+      const urls = await Promise.all(
+        files.map(async (file) => {
+          const formData = new FormData()
+          formData.append('file', file)
+          formData.append('upload_preset', 'vnqoc9iz')
+
+          const res = await fetch(
+            'https://api.cloudinary.com/v1_1/scrapbook/image/upload',
+            {
+              method: 'POST',
+              body: formData,
+            }
+          )
+          const data = await res.json()
+          return data.secure_url
+        })
+      )
+
+      setImageSrc(urls)
+      setValue('media', urls)
+      setUploadedData(true)
+    } catch (error) {
+      console.log(error)
+    }
+    setLoading(false)
+  }
+
   return (
-    <div>
-      <label htmlFor="media" className="mb-1 block text-sm text-gray-600">
+    <form onSubmit={handleUpload}>
+      <label htmlFor="file" className="mb-1 block text-sm text-gray-600">
         Upload multiple files
       </label>
       <input
+        name="file"
         type="file"
         multiple
-        name="media"
         onChange={handleOnChange}
         className="mb-3 w-full rounded-md border p-3 focus:border-sky-300 focus:ring-sky-300"
       />
@@ -39,8 +80,9 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
             </div>
           ))}
         </div>
-        {imageSrc.length && !uploadData ? (
+        {imageSrc.length && !uploadedData ? (
           <Button
+            type="submit"
             variant="text"
             className="w-full"
             loading={loading}
@@ -50,7 +92,7 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
           </Button>
         ) : null}
       </div>
-    </div>
+    </form>
   )
 }
 
