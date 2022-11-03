@@ -1,26 +1,14 @@
-# E-commerce CMS starter
+# Jamstackhack 22
 
-## Jamstackhack 22
+## E-commerce CMS
 
-🔦 The starter code for building CMS for a ecommerce website using Xata and Cloudinary.
+✨ The final code of an ecommerce CMS web application using Xata and Cloudinary.
 
-- ✨ [Final code](https://github.com/giridhar7632/jamstackhack-22)
+- 📺 [Demo](https://jamstackhack-22.netlify.app)
+- 🔦 [Starter Code](https://github.com/giridhar7632/ecommerce-cms-starter)
 <!-- - 📝 [Link to Article]() -->
 
-## Quick Start⚡
-
-You can simply fork this [sandbox](https://codesandbox.io/p/github/giridhar7632/ecommerce-cms-starter/main) and start editing in [codesandbox](https://codesandbox.io/).
-
-```bash
-yarn create next-app my-ecommerce-cms -e https://github.com/giridhar7632/ecommerce-cms-starter
-# or
-npx create-next-app my-ecommerce-cms -e https://github.com/giridhar7632/ecommerce-cms-starter
-
-# then
-cd my-ecommerce-cms && yarn dev
-```
-
-## Manual Setup 🚀
+## Devlopment Environment Setup 🚀
 
 Download it, git clone into coding environment of your choice 😃.
 
