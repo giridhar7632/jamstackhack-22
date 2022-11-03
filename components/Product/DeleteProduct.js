@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
+import { baseUrl } from '../../utils/config'
 import Button from '../common/Button'
 
 const DeleteProduct = ({ productId }) => {
@@ -9,7 +10,7 @@ const DeleteProduct = ({ productId }) => {
 
   const handleDelete = async () => {
     try {
-      await fetch('/api/products/deleteProduct', {
+      await fetch(`${baseUrl}/api/products/deleteProduct`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

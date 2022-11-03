@@ -39,10 +39,13 @@ export default Product
 
 export async function getStaticProps({ params }) {
   try {
-    const productsData = await xata.db.products.getAll()
-    const data = productsData.find((i) => i.id == params.id)
+    const data = await xata.db.products
+      .filter({
+        id: params.id,
+      })
+      .getMany()
     return {
-      props: { product: data },
+      props: { product: data[0] },
     }
   } catch (error) {
     return {
