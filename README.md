@@ -6,7 +6,7 @@
 
 - 📺 [Demo](https://jamstackhack-22.netlify.app)
 - 🔦 [Starter Code](https://github.com/giridhar7632/ecommerce-cms-starter)
-<!-- - 📝 [Link to Article]() -->
+- 📝 [Link to Article](https://dev.to/hackmamba/how-to-build-a-full-stack-content-management-system-using-nextjs-xata-and-cloudinary-iaa)
 
 ## Development Environment Setup 🚀
 
