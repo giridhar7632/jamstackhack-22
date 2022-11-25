@@ -20,7 +20,13 @@ function Product({ product }) {
           </h1>
           <div className="flex items-center space-x-2">
             <UpdateProduct product={product} />
-            <DeleteProduct productId={product?.id} />
+            <DeleteProduct
+              disabled={
+                product?.id === 'rec_ce0bsgt8oiq6e92pa810' ||
+                product?.id === 'rec_ce0btqp99gj1h1lgvno0'
+              }
+              productId={product?.id}
+            />
           </div>
         </header>
         {product ? (

@@ -3,7 +3,7 @@ import React, { Fragment, useState } from 'react'
 
 import Button from '../common/Button'
 
-const DeleteProduct = ({ productId }) => {
+const DeleteProduct = ({ productId, ...props }) => {
   const [isOpen, setIsOpen] = useState(false)
   const handleClose = () => setIsOpen(false)
   const handleOpen = () => setIsOpen(true)
@@ -27,7 +27,7 @@ const DeleteProduct = ({ productId }) => {
 
   return (
     <>
-      <Button onClick={handleOpen} variant="text" type="button">
+      <Button onClick={handleOpen} variant="text" type="button" {...props}>
         Delete
       </Button>
       <Transition appear show={isOpen} as={Fragment}>
